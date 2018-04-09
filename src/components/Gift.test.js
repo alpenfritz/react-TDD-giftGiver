@@ -8,4 +8,8 @@ describe('Gift', () => {
   it('renders correctly', () => {
     expect(gift).toMatchSnapshot();
   });
+
+  it('initializes a person and present in `state`', () => {
+    expect(gift.state()).toEqual({ person: '', present: '' });
+  })
 });
